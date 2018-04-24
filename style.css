@@ -1,36 +1,63 @@
-.jumbotron {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 0px;
-}
+/**
+ * General
+ */
 
+/* Set navbar styles */
 .navbar {
-	transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+	transition: background-color 1s ease 0s; /* Transition effect to make navbar fade in */
+	background-color: white;
+	border-bottom: 1px solid black;
 }
 
+/* Set navbar link color to black */
 .navbar-default .navbar-nav>li>a {
 	color: black;
 }
 
-.pagination li {
-	display: inline-block;
-	padding: 5px;
-}
-
+/* Make navbar invisible when at top of home page */
 .navbar.invis {
 	background-color: rgba(255, 255, 255, 0);
 	border: none;
 	transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
 }
 
+/* Set menu icon color */
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: black;
 }
 
+/* Set menu icon color when header background is invisible */
 .navbar-default .navbar-toggle .icon-bar.opaque {
 	background-color: white;
 }
 
+/* Set footer styles */
+footer {
+	background: #0c0c0c;
+	padding: 1em;
+	color: white;
+	margin-top: 25px;
+}
+
+/* Set maximum height for logo */
+.logo {
+	max-height: 50px;
+}
+
+/* Remove margin from headers */
+h1, h2 {
+	margin: 0;
+}
+
+/* Set main content top padding to prevent navbar overlap */
+.main-content {
+	padding-top: 75px;
+}
+
+/**
+ * Home page
+ */
+/* Set home page main banner properties */
 .jumbotron.background {
 	padding: 0 0 48px 0;
 	background-image: url(images/P5171124.jpg);
@@ -44,42 +71,38 @@
 	margin-bottom: 0;
 }
 
-.col-md-6.jumbotron, .col-md-3.jumbotron {
-	padding: 0;
-	margin: 0;
+/* Set font for portfolio items hover overlay */
+.portTitle {
+	font-family: 'Quicksand';
 }
 
-.col-md-6 > .container, .col-md-3 > .container {
-	height: 305px;
-	background: rgba(0, 0, 0, 0);
-	color: transparent;
-	transition: all .25s ease 0s;
+/* Center portfolio selection buttons */
+.nav-pills {
+    display: flex;
+    justify-content: center;
+	padding-bottom: 15px;
 }
 
-.col-md-6 > .container:hover, .col-md-3 > .container:hover {
-	background: rgba(0, 0, 0, .75);
+/* Set portfolio item overlay settings */
+.overlay {
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Change overlay opacity on hover */
+.overlay:hover {
+	opacity: 1;
+}
+
+/* Set portfolio item overlay text color */
+.overlay .portTitle {
 	color: white;
-	transition: all .25s ease 0s;
 }
 
-.list > li {
-	display:block;
-	background-color: #eee;
-	padding:10px;
-	box-shadow: inset 0 1px 0 #fff;
-}
-
-footer {
-	background: #0c0c0c;
-	padding: 1em;
-	color: white;
-	margin-top: 25px;
-}
-
-.input-sm {
-	font-size: 14px;
-}
-
+/* Set section header properties */
 .header {
 	position: relative;
 	margin-top: -1em;
@@ -90,41 +113,12 @@ footer {
 	color: #777777;
 }
 
-.row.border {
-	border-top: 1px solid #eeeeee;
-	margin-top: 50px;
+/* Set portfolio item background image size */
+.portfolio {
+	background-size: cover;
 }
 
-.container.content {
-	line-height: 24px;
-	color: #777777;
-}
-
-h1, h2 {
-	margin: 0;
-}
-
-.portTitle {
-	font-family: 'Quicksand';
-}
-
-.glyphicon {
-	font-size: 30px;
-	padding: 30px;
-	background-color: #fafafa;
-	border-radius: 999px;
-	transition: all .25s ease 0s;
-}
-
-.glyphicon:hover {
-	font-size: 30px;
-	padding: 30px;
-	background-color: #777777;
-	border-radius: 999px;
-	color: white;
-	transition: all .25s ease 0s;
-}
-
+/* Set in page link anchor properties */
 a.anchor {
 	display: block;
 	position: relative;
@@ -132,49 +126,16 @@ a.anchor {
 	visibility: hidden;
 }
 
-.text-danger {
-	text-align: left;
+/* Set section divider properties */
+.row.border {
+	border-top: 1px solid #eeeeee;
+	margin-top: 50px;
 }
 
-.logo {
-	max-height: 50px;
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #970808;
 }
 
-.nav-pills {
-    display: flex;
-    justify-content: center;
-}
-
-.overlay {
-	opacity: 0;
-	height: 250px;
-	background: rgba(0, 0, 0, 0.75);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.overlay:hover {
-	opacity: 1;
-}
-
-.overlay .portTitle {
-	color: white;
-}
-
-.portfolio {
-	background-size: cover;
-}
-
-.nav-pills {
-	padding-bottom: 15px;
-}
-
-.navbar {
-	background-color: white;
-	border-bottom: 1px solid black;
-}
-
-.main-content {
-	padding-top: 75px;
+.nav-pills>li>a {
+	color: black;
 }
