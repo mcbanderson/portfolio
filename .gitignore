@@ -1,0 +1,7 @@
+# Folders to ignore
+/dist
+/node_modules
+/bug-attack
+
+# Files to ignore
+.DS_Store

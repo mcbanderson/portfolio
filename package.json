@@ -1,0 +1,26 @@
+{
+  "name": "max-anderson-portfolio",
+  "version": "1.0.0",
+  "description": "The portfolio of Max Anderson.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcbanderson/portfolio.git"
+  },
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "isotope-layout": "^3.0.6",
+    "smooth-scroll": "^12.1.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-dest": "^0.2.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-rename": "^1.2.2"
+  }
+}

@@ -1,0 +1,243 @@
+/**
+ * General
+ */
+
+body {
+	font-family: 'Muli', sans-serif;
+	color: white;
+}
+
+/* Set navbar styles */
+.navbar {
+	transition: background-color 1s ease 0s; /* Transition effect to make navbar fade in */
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid black;
+}
+
+/* Set navbar link color to white */
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+/* Make navbar invisible when at top of home page */
+.navbar.invis {
+	background: none;
+	border: none;
+	transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+}
+
+/* Set menu icon color */
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: black;
+}
+
+/* Set menu icon color when header background is invisible */
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+/* Set footer styles */
+footer {
+	background: #0c0c0c;
+	padding: 1em;
+	color: white;
+	/* font-family: 'Muli', sans-serif; */
+}
+
+/* Set maximum height for logo */
+.logo {
+	max-height: 50px;
+}
+
+.font-ovo, h3 {
+	font-family: 'Ovo', serif;
+}
+
+/* Set main content top padding to prevent navbar overlap */
+.main-content {
+	padding-top: 75px;
+}
+
+/**
+ * Home page
+ */
+/* Set home page main banner properties */
+.jumbotron.background {
+	padding: 0 0 48px 0;
+	background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(images/golden-gate-bridge.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 0px;
+	color: white;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	margin-bottom: 0;
+}
+
+/* Set font for portfolio items hover overlay */
+.portTitle {
+	/* font-family: 'Muli', sans-serif; */
+	font-weight: 200;
+}
+
+/* Center portfolio selection buttons */
+.nav-pills {
+    display: flex;
+    justify-content: center;
+	padding-bottom: 15px;
+}
+
+.nav-pills li {
+	flex-basis: 10%;
+}
+
+/* Set portfolio item overlay settings */
+.overlay {
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Change overlay opacity on hover */
+.overlay:hover {
+	opacity: 1;
+}
+
+/* Set portfolio item overlay text color */
+.overlay .portTitle {
+	color: white;
+	margin: 0;
+}
+
+/* Set section header properties */
+.header {
+	position: relative;
+	padding: 5px 10px;
+	font-size: 24px;
+	font-weight: 100;
+	color: white;
+	font-family: 'Ovo', serif;
+}
+
+/* Set portfolio item background image size */
+.portfolio {
+	background-size: cover;
+}
+
+/* Set in page link anchor properties */
+.anchor {
+	display: block;
+	position: relative;
+	top: -50px;
+	visibility: hidden;
+}
+
+/* Set section divider properties */
+.row.border {
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+	background-color: white;
+	color: #111;
+}
+
+.nav-pills > li > a {
+	color: white;
+	border: 1px solid white;
+}
+
+.nav-pills > li + li {
+	margin-left: 2rem;
+}
+
+.nav-pills > li a:hover {
+	color: #111;
+}
+
+.tagline {
+	letter-spacing: 0.5rem;
+}
+
+.tagline .letter, .portTitle .letter {
+	display: inline-block;
+}
+
+.name .letter {
+	font-size: 4rem;
+}
+
+.jumbotron .name {
+	letter-spacing: 2rem;
+	font-family: 'Ovo', serif;
+	margin-bottom: 0;
+}
+
+.jumbotron p {
+	font-size: 1.5rem;
+	margin-bottom: 0;
+}
+
+#portfolio-header {
+	background-color: #111;
+}
+
+#about-header {
+	background-color: #222;
+	padding-bottom: 35px;
+}
+
+.modal-header {
+	min-height: inherit;
+	padding: 0;
+	border-bottom: none;
+}
+
+button.close {
+	padding: 15px 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+	z-index: 1;
+	opacity: 0.75;
+}
+
+button.close span {
+	color: white;
+	text-shadow: none;
+}
+
+.modal-content {
+	background-color: #222;
+}
+
+.item-title {
+	font-size: 4rem;
+	margin-bottom: 0;
+	font-family: 'Ovo', serif;
+}
+
+a.item-title:hover {
+	color: #eee;
+}
+
+.item-secondary-title {
+	font-size: 1.5rem;
+	margin-top: 0;
+}
+
+.item-description {
+	margin-top: 20px;
+	font-size: 1.5rem;
+}
+
+.skill-list li {
+	padding: 0 0 10px;
+	font-size: 1.5rem;
+}
