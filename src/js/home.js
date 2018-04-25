@@ -1,9 +1,7 @@
 $(document).ready( function() {
-	$(".overlay").height($(".portfolio").outerWidth());
-
 	var isotopeContainer = $('.isotopeContainer');
 	if( !isotopeContainer.length || !jQuery().isotope ) return;
-	isotopeContainer.isotope({
+	var isotope = isotopeContainer.isotope({
 		itemSelector: '.isotopeSelector'
 	});
 	$('.isotopeFilters').on( 'click', 'a', function(e) {
@@ -26,6 +24,10 @@ $(document).ready( function() {
 			$('.navbar').removeClass(' invis'); // removing the opaque class
 		}
 	});
+
+	$(".overlay").height($(".portfolio").outerWidth());
+
+	$('.isotopeContainer').isotope('layout');
 });
 
 $(window).resize(function() {
@@ -33,7 +35,7 @@ $(window).resize(function() {
 });
 
 $('.tagline').each(function(){
-  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });
 
 anime.timeline({loop: false})
@@ -73,7 +75,7 @@ anime.timeline({loop: false})
 
 
 $('.portTitle').each(function(index) {
-  $(this).html($(this).text().replace(/([^\x00-\xff]|\w|\S)/g, "<span class='letter letter-" + index + "'>$&</span>"));
+    $(this).html($(this).text().replace(/([^\x00-\xff]|\w|\S)/g, "<span class='letter letter-" + index + "'>$&</span>"));
 });
 
 function hoverIn(number) {
