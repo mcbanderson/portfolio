@@ -24,3 +24,7 @@ gulp.task('clean-dist', function () {
     return gulp.src('./dist/images/*')
                .pipe(cleanDest('./dist/images'));
 });
+
+gulp.task('watch', function() {
+    gulp.watch('./src/**/*', ['default']);
+});
