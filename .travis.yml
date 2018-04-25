@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - node
+before_script:
+  - npm install -g gulp-cli
+script: gulp
+deploy:
+  provider: s3
+  access_key_id: AKIAJMOBGU42WBFQHAHA
+  secret_access_key:
+    secure: HDGrQrRoGYGYsKwC+Wz3UTPwJKWNQGkcpo35BVImykDpxZRzEQ3/aIqgrjFw+TVr+/2R/Vy+fS7kcKjtdf25KceI0Zith7sV4sceTfQcIxmXvY95L/muyOiX5mVnPFHdT8OyLPJ79otpDRNK01FmLpDcxUBsH4jRFuCo7Z3KNz8v4sKipvYvNokAX5RXlVPzcndwUDyDooNRv7eI79qWmRCpW/QEdl35u+3Pg0gF1J1B8kD4Cxk9gmLboPu9UJeKS9cVgV1426bzmito7BbTHzqhCv981IircLVi4zdLtFhLFAQ6AD+R4Q8yRuEC1ra3EqOCIV7Xr3Geby94M9x7VK+nrgZIDbWFpULFC/5hyozrkj5yNjunNGYKpZdxpx0C/GMQfXs1lfTqaCpgYSTLG5r8YJ2eW8KAgdHLAAxsptclF/X8cK6lHpxgYu4jnxdiz3Pzax/22PpH0RsvXzX6wvUKQ5baof4TJchtbHPjkOh+ZZ7fh3VM4Q9w7Xtl1MaGkzEf4CpanFwtiuU9w3IcWJy0eZd4Aeu3Q7eu0f7/snobkBvoy9KDFfpOZFumrpcwQWEH434K0Iuldqtmn6FqEDaYhdl4RJwCukQRdKHz40f5W08bfe3Iur56eoY+bzDsy+LBZscn3P+ZL0AN+Z2bvyHlhIhJLKsSVD9QjsPyj18=
+  bucket: mcbanderson.com
+  acl: public_read
+  skip_cleanup: true
+  local_dir: dist
+  region: us-west-1
