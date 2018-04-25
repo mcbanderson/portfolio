@@ -152,8 +152,8 @@ footer {
 	border: 1px solid white;
 }
 
-.nav-pills > li + li {
-	margin-left: 2rem;
+.nav-justified .nav-item {
+	margin: 10px;
 }
 
 .nav-pills > li a:hover {
