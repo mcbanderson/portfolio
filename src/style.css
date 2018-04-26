@@ -170,13 +170,31 @@ footer {
 }
 
 .name .letter {
-	font-size: 2.5rem;
+	font-size: 6vw;
+}
+
+#tagline2, #tagline3 {
+	font-size: 3.5vw;
 }
 
 .jumbotron .name {
-	letter-spacing: 1.25rem;
+	letter-spacing: 3vw;
 	font-family: 'Ovo', serif;
 	margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.name .letter {
+		font-size: 3vw;
+	}
+
+	#tagline2, #tagline3 {
+		font-size: 1.25vw;
+	}
+
+	.jumbotron .name {
+		letter-spacing: 1.75vw;
+	}
 }
 
 .jumbotron p {
