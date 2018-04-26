@@ -41,13 +41,11 @@ $('.tagline').each(function(){
 anime.timeline({loop: false})
     .add({
 		targets: '#tagline .letter',
-		translateX: [100,0],
-		translateZ: 0,
 		opacity: [0,1],
 		easing: "easeOutExpo",
 		duration: 1200,
 		delay: function(el, i) {
-		  return 1000 + 20 * i;
+		  return 1000 + 40 * i;
 		}
     })
 	.add({
