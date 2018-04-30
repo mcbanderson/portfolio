@@ -58,20 +58,46 @@
 <body>
 	<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top invis">
+	<nav class="navbar navbar-dark fixed-top invis">
 		<a href="#" class="navbar-brand smooth-scroll"><img src="images/Monogram4-white.png" alt="MCB Anderson Logo" title="Logo" class="logo" /></a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
-
-		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a href="#about" class="nav-link smooth-scroll">About</a></li>
-				<li class="nav-item"><a href="#portfolio" class="nav-link smooth-scroll">Portfolio</a></li>
-		    </ul>
-		</div>
 	</nav>
+
+    <div id="menu" class="position-fixed menu collapse">
+        <div class="container-fluid d-flex justify-content-between align-items-center text-center flex-column" style="height: 100vh;">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="p-2">
+
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link smooth-scroll">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link smooth-scroll">About</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link smooth-scroll">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <a href="https://www.github.com/mcbanderson">
+                        <img src="images/GitHub-Mark-Light-32px.png" class="img-fluid social-icon" />
+                    </a>
+                    <p class="p-2">
+                        &copy; Max Anderson 2018
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div id="content" class="jumbotron jumbotron-fluid background jumbo-overlay">

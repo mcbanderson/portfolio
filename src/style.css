@@ -7,6 +7,18 @@ body {
 	color: white;
 }
 
+.menu {
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
 /* Set navbar styles */
 .navbar {
 	transition: background-color 1s ease 0s; /* Transition effect to make navbar fade in */
@@ -15,8 +27,13 @@ body {
 }
 
 /* Set navbar link color to white */
-.navbar-dark .navbar-nav .nav-link {
+.navbar-nav .nav-link {
 	color: white;
+}
+
+.navbar-nav .nav-item {
+    font-size: 2rem;
+    font-family: 'Ovo', serif;
 }
 
 /* Make navbar invisible when at top of home page */
@@ -41,7 +58,7 @@ body {
 }
 
 .navbar-dark .navbar-toggler {
-	border-color: white;
+	border: none;
 }
 
 /* Set footer styles */
@@ -266,4 +283,8 @@ a.item-title:hover {
 .container-padding {
 	padding-top: 35px;
 	padding-bottom: 25px;
+}
+
+.social-icon {
+    padding: 10px;
 }
