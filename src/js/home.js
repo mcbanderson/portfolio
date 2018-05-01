@@ -32,7 +32,7 @@ $(document).ready(function() {
             $('.navbar').removeClass('invis');
         }
     });
-    $('.navbar-nav .nav-item').click(function() {
+    $('.navbar-nav .nav-item, #logo').click(function() {
         $('#menu').collapse('hide');
     });
 
