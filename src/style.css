@@ -169,6 +169,10 @@ footer {
 	border: 1px solid white;
 }
 
+a, a:hover {
+    color: white;
+}
+
 .nav-justified .nav-item {
 	margin: 10px;
 }
