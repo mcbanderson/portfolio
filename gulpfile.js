@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var cleanDest = require('gulp-clean-dest');
 
-gulp.task('default', ['clean-dist', 'copy']);
+gulp.task('default', gulp.series(gulp.parallel('clean-dist', 'copy')));
 
-gulp.task('copy', ['clean-dist'], function () {
+gulp.task('copy', gulp.series(gulp.parallel('clean-dist'), function copy () {
     gulp.src('./src/images/*')
         .pipe(gulp.dest('./dist/images'));
     gulp.src('./src/js/*')
@@ -18,9 +18,9 @@ gulp.task('copy', ['clean-dist'], function () {
         .pipe(gulp.dest('./dist/js'));
     gulp.src('./node_modules/smooth-scroll/dist/js/smooth-scroll.min.js')
         .pipe(gulp.dest('./dist/js'));
-});
+}));
 
-gulp.task('clean-dist', function () {
+gulp.task('clean-dist', function clean_dist () {
     return gulp.src('./dist/images/*')
                .pipe(cleanDest('./dist/images'));
 });
