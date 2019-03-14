@@ -18,7 +18,7 @@
     "smooth-scroll": "^12.1.5"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-clean-dest": "^0.2.0",
     "gulp-image-resize": "^0.13.0",
     "gulp-rename": "^1.2.2"
