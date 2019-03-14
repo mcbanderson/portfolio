@@ -1,9 +1,12 @@
 var gulp = require('gulp');
 var cleanDest = require('gulp-clean-dest');
 
-gulp.task('default', gulp.series(gulp.parallel('clean-dist', 'copy')));
+function clean() {
+    return gulp.src('./dist/images/*')
+               .pipe(cleanDest('./dist/images'));
+}
 
-gulp.task('copy', gulp.series(gulp.parallel('clean-dist'), function copy () {
+function build() {
     gulp.src('./src/images/*')
         .pipe(gulp.dest('./dist/images'));
     gulp.src('./src/js/*')
@@ -16,15 +19,8 @@ gulp.task('copy', gulp.series(gulp.parallel('clean-dist'), function copy () {
         .pipe(gulp.dest('./dist'));
     gulp.src('./node_modules/isotope-layout/dist/isotope.pkgd.min.js')
         .pipe(gulp.dest('./dist/js'));
-    gulp.src('./node_modules/smooth-scroll/dist/js/smooth-scroll.min.js')
-        .pipe(gulp.dest('./dist/js'));
-}));
+    return gulp.src('./node_modules/smooth-scroll/dist/js/smooth-scroll.min.js')
+               .pipe(gulp.dest('./dist/js'));
+}
 
-gulp.task('clean-dist', function clean_dist () {
-    return gulp.src('./dist/images/*')
-               .pipe(cleanDest('./dist/images'));
-});
-
-gulp.task('watch', function() {
-    gulp.watch('./src/**/*', ['default']);
-});
+exports.default = gulp.series(clean, build)
